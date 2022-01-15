@@ -1,0 +1,24 @@
+##################################
+3 státy s nejvyšší základní sazbou DPH
+Země: Hungary	(HU)
+ Zákl. sazba: 27%	 1. snížená: 18%	2. snížená: 5%	Supersnížená: 0%	Speciální: 0%
+...........................
+Země: Sweden	(SE)
+ Zákl. sazba: 25%	 1. snížená: 12%	2. snížená: 6%	Supersnížená: 0%	Speciální: 0%
+...........................
+Země: Croatia	(HR)
+ Zákl. sazba: 25%	 1. snížená: 13%	2. snížená: 5%	Supersnížená: 0%	Speciální: 0%
+...........................
+##################################
+##################################
+3 státy s nejnižší základní sazbou DPH
+Země: Luxembourg	(LU)
+ Zákl. sazba: 17%	 1. snížená: 14%	2. snížená: 8%	Supersnížená: 3%	Speciální: 12%
+...........................
+Země: Malta	(MT)
+ Zákl. sazba: 18%	 1. snížená: 7%	2. snížená: 5%	Supersnížená: 0%	Speciální: 0%
+...........................
+Země: Germany	(DE)
+ Zákl. sazba: 19%	 1. snížená: 7%	2. snížená: 0%	Supersnížená: 0%	Speciální: 0%
+...........................
+##################################
