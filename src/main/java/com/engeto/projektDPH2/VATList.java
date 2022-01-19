@@ -14,20 +14,27 @@ import java.util.Collections;
 import java.util.List;
 import java.text.DecimalFormat;
 
+
 public class VATList {
     List <VAT> vatList = new ArrayList<>();
+
 
     public static BigDecimal getValue (String value, String i, JSONObject json) {
         return json.getJSONObject(i).getBigDecimal(value);
     }
-    public void getAndSetVATList() throws IOException, InterruptedException {
+    public static String getAllCountries() throws IOException, InterruptedException {
         String getVATFromWeb = "https://euvatrates.com/rates.json";
         HttpClient httpClient = HttpClient.newBuilder().build();
         HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(getVATFromWeb)).GET().build();
         HttpResponse httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
-        String data = httpResponse.body().toString();
+        String allCountries = httpResponse.body().toString();
+        return allCountries;
+    }
 
-        String editedData = data.replaceAll("false", "0");
+    public void getAndSetVATList() throws IOException, InterruptedException {
+        String allCountries = getAllCountries();
+
+        String editedData = allCountries.replaceAll("false", "0");
         JSONObject jsonObject = new JSONObject(editedData);
         JSONObject jsonRates = jsonObject.getJSONObject("rates");
 
