@@ -1,5 +1,7 @@
 package com.engeto.projektDPH2;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.Format;
@@ -8,11 +10,16 @@ public class VAT {
 
     private String shortName;
     private String country;
-    private BigDecimal standard_rate;
-    private BigDecimal reduced_rate;
-    private BigDecimal reduced_rate_alt;
-    private BigDecimal super_reduced_rate;
-    private BigDecimal parking_rate;
+    @JsonProperty("standard_rate")
+    private BigDecimal standardRate;
+    @JsonProperty("reduced_rate")
+    private BigDecimal reducedRate;
+    @JsonProperty("reduced_rate_alt")
+    private BigDecimal reducedRateAlt;
+    @JsonProperty("super_reduced_rate")
+    private BigDecimal superReducedRate;
+    @JsonProperty("parking_rate")
+    private BigDecimal parkingRate;
 
     public String getShortName() {
         return shortName;
@@ -30,50 +37,50 @@ public class VAT {
         this.country = country;
     }
 
-    public BigDecimal getStandard_rate() {
-        return standard_rate;
+    public BigDecimal getStandardRate() {
+        return standardRate;
     }
 
-    public void setStandard_rate(BigDecimal standard_rate) {
-        this.standard_rate = standard_rate;
+    public void setStandardRate(BigDecimal standardRate) {
+        this.standardRate = standardRate;
     }
 
-    public BigDecimal getReduced_rate() {
-        return reduced_rate;
+    public BigDecimal getReducedRate() {
+        return reducedRate;
     }
 
-    public void setReduced_rate(BigDecimal reduced_rate) {
-        this.reduced_rate = reduced_rate;
+    public void setReducedRate(BigDecimal reducedRate) {
+        this.reducedRate = reducedRate;
     }
 
-    public BigDecimal getReduced_rate_alt() {
-        return reduced_rate_alt;
+    public BigDecimal getReducedRateAlt() {
+        return reducedRateAlt;
     }
 
-    public void setReduced_rate_alt(BigDecimal reduced_rate_alt) {
-        this.reduced_rate_alt = reduced_rate_alt;
+    public void setReducedRateAlt(BigDecimal reducedRateAlt) {
+        this.reducedRateAlt = reducedRateAlt;
     }
 
-    public BigDecimal getSuper_reduced_rate() {
-        return super_reduced_rate;
+    public BigDecimal getSuperReducedRate() {
+        return superReducedRate;
     }
 
-    public void setSuper_reduced_rate(BigDecimal super_reduced_rate) {
-        this.super_reduced_rate = super_reduced_rate;
+    public void setSuperReducedRate(BigDecimal superReducedRate) {
+        this.superReducedRate = superReducedRate;
     }
 
-    public BigDecimal getParking_rate() {
-        return parking_rate;
+    public BigDecimal getParkingRate() {
+        return parkingRate;
     }
 
-    public void setParking_rate(BigDecimal parking_rate) {
-        this.parking_rate = parking_rate;
+    public void setParkingRate(BigDecimal parkingRate) {
+        this.parkingRate = parkingRate;
     }
 
     public String shortDescription () {
         Format format = new DecimalFormat("0.#");
         String info;
-        info = getShortName()+ "--- country: " +getCountry()+ " -------\t standard_rate: " +format.format(getStandard_rate());
+        info = getShortName()+ "--- country: " +getCountry()+ " -------\t standard_rate: " +format.format(getStandardRate());
         return info;
     }
 
@@ -81,9 +88,9 @@ public class VAT {
         Format format = new DecimalFormat("0.#");
         String info;
         info = "Země: " +getCountry()+ "\t(" +shortName+")";
-        info+= "\n Zákl. sazba: " +format.format(getStandard_rate())+ "%\t 1. snížená: " +format.format(getReduced_rate())+
-                "%\t2. snížená: " +format.format(getReduced_rate_alt())+ "%\tSupersnížená: "+format.format(getSuper_reduced_rate())+
-                "%\tSpeciální: " +format.format(getParking_rate())+"%";
+        info+= "\n Zákl. sazba: " +format.format(getStandardRate())+ "%\t 1. snížená: " +format.format(getReducedRate())+
+                "%\t2. snížená: " +format.format(getReducedRateAlt())+ "%\tSupersnížená: "+format.format(getSuperReducedRate())+
+                "%\tSpeciální: " +format.format(getParkingRate())+"%";
         info+= "\n...........................";
         return info;
     }

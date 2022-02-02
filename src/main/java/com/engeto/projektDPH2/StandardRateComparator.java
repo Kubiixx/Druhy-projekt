@@ -6,7 +6,7 @@ public class StandardRateComparator implements Comparator <VAT>{
 
     @Override
     public int compare(VAT first, VAT second) {
-        return first.getStandard_rate().compareTo(second.getStandard_rate());
+        return first.getStandardRate().compareTo(second.getStandardRate());
     }
 
 }

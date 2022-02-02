@@ -36,8 +36,8 @@ public class MainController {
         BigDecimal description = BigDecimal.ZERO;
         for (VAT vat: list.vatList){
             if (vat.getShortName().equals(shortName)) {
-                if (value.equals("standard")) {description = vat.getStandard_rate();}
-                if (value.equals("reduced")) {description = vat.getReduced_rate();}
+                if (value.equals("standard")) {description = vat.getStandardRate();}
+                if (value.equals("reduced")) {description = vat.getReducedRate();}
                 else description = BigDecimal.valueOf(9999);
                 break;
             }

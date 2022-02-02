@@ -45,11 +45,11 @@ public class VATList {
             VAT vat = new VAT();
             vat.setShortName(i);
             vat.setCountry(jsonRates.getJSONObject(i).getString("country"));
-            vat.setStandard_rate(getValue("standard_rate", i, jsonRates));
-            vat.setReduced_rate(getValue("reduced_rate", i, jsonRates));
-            vat.setReduced_rate_alt(getValue("reduced_rate_alt", i, jsonRates));
-            vat.setSuper_reduced_rate(getValue("super_reduced_rate", i, jsonRates));
-            vat.setParking_rate(getValue("parking_rate", i, jsonRates));
+            vat.setStandardRate(getValue("standard_rate", i, jsonRates));
+            vat.setReducedRate(getValue("reduced_rate", i, jsonRates));
+            vat.setReducedRateAlt(getValue("reduced_rate_alt", i, jsonRates));
+            vat.setSuperReducedRate(getValue("super_reduced_rate", i, jsonRates));
+            vat.setParkingRate(getValue("parking_rate", i, jsonRates));
             vatList.add(vat);
         });
     }
@@ -57,7 +57,7 @@ public class VATList {
     public void printWholeVATList(){
         Format format = new DecimalFormat("0.#");
         vatList.forEach(i -> System.out.println(i.getShortName()+ "--- country: " +i.getCountry()+
-                " -------\t standard_rate: " +format.format(i.getStandard_rate())));
+                " -------\t standard_rate: " +format.format(i.getStandardRate())));
     }
 
     public void getSortedList () {
