@@ -1,4 +1,4 @@
-# Druhý proejkt
+# Druhý projekt
 ## Vypracovaný druhý projekt na rozšířené zpracování sazeb DPH 28 zemí EU.
 
 ### Zadání projektu:
