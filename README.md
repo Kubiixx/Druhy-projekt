@@ -15,6 +15,7 @@ Naparsovat JSON soubor do objektu
 Implementovat vyhledávací logiku
 Vypsat hodnoty pomocí interaktivní příkazové řádky
 Umožnit zapsat výsledek do souboru
+
 BONUS1: Následně pak také implementovat vyhledávání daňových sazeb podle zkratek zemí, které bude uživatel zadávat do konzole.
 
 BONUS2: Vytvořte vlastní HTTP API, které vystaví danou funkcionalitu přes webový server (jak jsme si ukázali v lekci 12)
